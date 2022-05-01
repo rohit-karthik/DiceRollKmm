@@ -6,7 +6,7 @@
         android:allowBackup="false"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:label="Dice Roller App">
+        android:label="Number Generator">
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -11,7 +11,9 @@
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		6A2645D5EBE417C00FAC41C7 /* Pods_iosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1005F2C5C8CB9EDC8DB46D1 /* Pods_iosApp.framework */; };
-		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
+		B355936F281CE74800B58A1D /* Image.imageset in Resources */ = {isa = PBXBuildFile; fileRef = B355936D281CE74800B58A1D /* Image.imageset */; };
+		B3559370281CE74800B58A1D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B355936E281CE74800B58A1D /* ContentView.swift */; };
+		B3B11C33281DD2E1004A4E68 /* NumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B11C32281DD2E1004A4E68 /* NumberGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,9 +22,11 @@
 		197CA3EBAF101A4F252829AC /* Pods-iosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.release.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.release.xcconfig"; sourceTree = "<group>"; };
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
 		3AF203E47CFB5B3608FE91BB /* Pods-iosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.debug.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.debug.xcconfig"; sourceTree = "<group>"; };
-		7555FF7B242A565900829871 /* Dice Roller App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dice Roller App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7555FF7B242A565900829871 /* Number Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Number Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B355936D281CE74800B58A1D /* Image.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Image.imageset; path = ../../../../.Trash/Image.imageset; sourceTree = "<group>"; };
+		B355936E281CE74800B58A1D /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../../../../.Trash/ContentView.swift; sourceTree = "<group>"; };
+		B3B11C32281DD2E1004A4E68 /* NumberGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberGenerator.swift; sourceTree = "<group>"; };
 		F1005F2C5C8CB9EDC8DB46D1 /* Pods_iosApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -59,7 +63,7 @@
 		7555FF7C242A565900829871 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7555FF7B242A565900829871 /* Dice Roller App.app */,
+				7555FF7B242A565900829871 /* Number Generator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,11 +71,13 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				B355936E281CE74800B58A1D /* ContentView.swift */,
+				B355936D281CE74800B58A1D /* Image.imageset */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
-				7555FF82242A565900829871 /* ContentView.swift */,
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
+				B3B11C32281DD2E1004A4E68 /* NumberGenerator.swift */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -111,7 +117,7 @@
 			);
 			name = iosApp;
 			productName = iosApp;
-			productReference = 7555FF7B242A565900829871 /* Dice Roller App.app */;
+			productReference = 7555FF7B242A565900829871 /* Number Generator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -154,6 +160,7 @@
 			files = (
 				058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */,
 				058557BB273AAA24004C7B11 /* Assets.xcassets in Resources */,
+				B355936F281CE74800B58A1D /* Image.imageset in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,8 +196,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3559370281CE74800B58A1D /* ContentView.swift in Sources */,
+				B3B11C33281DD2E1004A4E68 /* NumberGenerator.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
-				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +336,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.dice-roller-app";
-				PRODUCT_NAME = "Dice Roller App";
+				PRODUCT_NAME = "Number Generator";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -349,7 +357,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.dice-roller-app";
-				PRODUCT_NAME = "Dice Roller App";
+				PRODUCT_NAME = "Number Generator";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

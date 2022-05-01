@@ -2,34 +2,38 @@ package com.example.mydemokmmapp.android
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
 import android.widget.Button
-import android.widget.ImageView
-import com.example.mydemokmmapp.GenerateDiceRoll
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
+import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.setupActionBarWithNavController
+import com.example.mydemokmmapp.GenerateNumber
 
 /**
  * This is the base android activity for the Dice Roller application
  */
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var navController: NavController
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val resultView: ImageView = findViewById(R.id.dice_image)
+        setSupportActionBar(findViewById(R.id.main_toolbar))
 
-        findViewById<Button>(R.id.generate_button).setOnClickListener {
-            resultView.setImageResource(getImageResource())
-        }
+        navController = supportFragmentManager.findFragmentById(R.id.fragment_host)!!.findNavController()
+
+        setupActionBarWithNavController(navController)
+
     }
 
-    private fun getImageResource(): Int {
-        return when (GenerateDiceRoll().androidDiceRoll()) {
-            1 -> R.drawable.dice_1
-            2 -> R.drawable.dice_2
-            3 -> R.drawable.dice_3
-            4 -> R.drawable.dice_4
-            5 -> R.drawable.dice_5
-            else -> R.drawable.dice_6
-        }
+    override fun onSupportNavigateUp(): Boolean {
+        return super.onSupportNavigateUp() || navController.navigateUp()
     }
+
 }
